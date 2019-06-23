@@ -1,0 +1,46 @@
+MacBook-Pro:remote_test johanbjork$ bazel build :py_image
+INFO: Invocation ID: 9f2f55bc-4dbe-40c7-bbd9-59a137df695b
+INFO: Analyzed target //:py_image (36 packages loaded, 629 targets configured).
+INFO: Found 1 target...
+Target //:py_image up-to-date:
+  bazel-bin/py_image-layer.tar
+INFO: Elapsed time: 119.243s, Critical Path: 104.23s
+INFO: 13 processes: 1 remote cache hit, 12 local.
+INFO: Build completed successfully, 33 total actions
+MacBook-Pro:remote_test johanbjork$ bazel run :py_image
+INFO: Invocation ID: df30c5d9-450d-4582-9b75-6a0cf106cc60
+INFO: Analyzed target //:py_image (0 packages loaded, 0 targets configured).
+INFO: Found 1 target...
+Target //:py_image up-to-date:
+  bazel-bin/py_image-layer.tar
+INFO: Elapsed time: 0.170s, Critical Path: 0.00s
+INFO: 0 processes.
+INFO: Build completed successfully, 1 total action
+INFO: Build completed successfully, 1 total action
+64ad805cc1b1: Loading layer [==================================================>]  20.48kB/20.48kB
+Loaded image ID: sha256:4456a9cdc50e6dc86b08ab763ede612dbc30a5978e7dba55aa051822b5baff5d
+Tagging 4456a9cdc50e6dc86b08ab763ede612dbc30a5978e7dba55aa051822b5baff5d as bazel:py_image
+MacBook-Pro:remote_test johanbjork$ bazel clean
+INFO: Invocation ID: 213eef3e-a902-443c-8a63-fe04b337f7f0
+INFO: Starting clean.
+MacBook-Pro:remote_test johanbjork$ bazel run :py_image
+INFO: Invocation ID: 1dca5c57-1b9a-4efd-8dcb-d8b4b6cceb6e
+INFO: Analyzed target //:py_image (37 packages loaded, 628 targets configured).
+INFO: Found 1 target...
+Target //:py_image up-to-date:
+  bazel-bin/py_image-layer.tar
+INFO: Elapsed time: 6.357s, Critical Path: 4.86s
+INFO: 13 processes: 13 remote cache hit.
+INFO: Build completed successfully, 33 total actions
+INFO: Build completed successfully, 33 total actions
+cat: /private/var/tmp/_bazel_johanbjork/b6099d624b47ac4c36147f24a9b2765a/execroot/bazel_test/bazel-out/darwin-fastbuild/bin/py_image.runfiles/bazel_test/../py_image_base/image/000.tar.gz.nogz.sha256: No such file or directory
+cat: /private/var/tmp/_bazel_johanbjork/b6099d624b47ac4c36147f24a9b2765a/execroot/bazel_test/bazel-out/darwin-fastbuild/bin/py_image.runfiles/bazel_test/../py_image_base/image/001.tar.gz.nogz.sha256: No such file or directory
+cat: /private/var/tmp/_bazel_johanbjork/b6099d624b47ac4c36147f24a9b2765a/execroot/bazel_test/bazel-out/darwin-fastbuild/bin/py_image.runfiles/bazel_test/../py_image_base/image/002.tar.gz.nogz.sha256: No such file or directory
+cat: /private/var/tmp/_bazel_johanbjork/b6099d624b47ac4c36147f24a9b2765a/execroot/bazel_test/bazel-out/darwin-fastbuild/bin/py_image.runfiles/bazel_test/../py_image_base/image/003.tar.gz.nogz.sha256: No such file or directory
+cat: /private/var/tmp/_bazel_johanbjork/b6099d624b47ac4c36147f24a9b2765a/execroot/bazel_test/bazel-out/darwin-fastbuild/bin/py_image.runfiles/bazel_test/py_image-layer.tar.sha256: No such file or directory
+cat: /private/var/tmp/_bazel_johanbjork/b6099d624b47ac4c36147f24a9b2765a/execroot/bazel_test/bazel-out/darwin-fastbuild/bin/py_image.runfiles/bazel_test/py_image.0.config: No such file or directory
+No JSON object could be decoded
+cat: /private/var/tmp/_bazel_johanbjork/b6099d624b47ac4c36147f24a9b2765a/execroot/bazel_test/bazel-out/darwin-fastbuild/bin/py_image.runfiles/bazel_test/../py_image_base/image/000.tar.gz.nogz.sha256: No such file or directory
+cat: /private/var/tmp/_bazel_johanbjork/b6099d624b47ac4c36147f24a9b2765a/execroot/bazel_test/bazel-out/darwin-fastbuild/bin/py_image.runfiles/bazel_test/../py_image_base/image/000.tar.gz.nogz.sha256: No such file or directory
+cat: /private/var/tmp/_bazel_johanbjork/b6099d624b47ac4c36147f24a9b2765a/execroot/bazel_test/bazel-out/darwin-fastbuild/bin/py_image.runfiles/bazel_test/../py_image_base/image/001.tar.gz.nogz.sha256: No such file or directory
+ln: .tar: File exists
